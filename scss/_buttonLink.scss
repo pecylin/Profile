@@ -1,0 +1,20 @@
+.link{
+	&--linkOut{
+		display: inline-block;
+		background-color: var(--cyan-500);
+		color: white;
+		font-size: var(--font-small);
+		padding: 0.25rem 0.5rem;
+		margin-left: 0.5rem;
+		border-radius: 1.5rem;
+		text-decoration: none;
+	}
+	&--works{
+		display: block;
+		color: var(--gray-900);
+		text-decoration: none;
+	}
+	&--works:hover{
+		text-decoration: underline;
+	}
+}

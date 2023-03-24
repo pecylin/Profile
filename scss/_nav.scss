@@ -1,0 +1,12 @@
+.nav{
+	position: absolute;
+	right: 0;
+	top: 6rem;
+	display: flex;
+	flex-flow: row nowrap;
+
+	&-item{
+		display: inline-block;
+		margin-right: 1rem;
+	}
+}

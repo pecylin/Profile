@@ -1,0 +1,103 @@
+.avatar{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.avatarImg{
+	width: 10rem;
+	height: 10rem;
+	position: relative;
+	background: url(../images/Avatar.svg) no-repeat 0 0;
+	background-size: 100%;
+
+	&::before,&::after{
+		position: absolute;
+		left: 105%;
+	}
+
+	&::before{
+		content: "Hi \A I'm 07";
+		width: 6.2rem;
+		height: 6.2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: black;
+		color: white;
+		font-size: var(--font-large);
+		text-align: center;
+		white-space: pre;
+		border-radius: 50%;
+	}
+	&::after{
+		content: '';
+		width: 0;
+		height: 0;
+		top: 50%;
+		border: 0.6rem solid transparent;
+		border-top: 1rem solid black;
+		border-bottom: 0;
+		transform: rotate(45deg);
+	}
+}
+.info{
+	position: relative;
+
+	&::before, &::after{
+		content: '';
+		width: calc(50% - 6rem);
+		display: block;
+		position: absolute;
+		border: 0.125rem solid var(--gray-900);
+		border-right: 0;
+		border-top-left-radius: 1.5rem;
+		border-bottom-left-radius: 1.5rem;
+		z-index: -1;
+	}
+	&::before{
+		height: calc(100% - 5rem);
+		top: 5rem;
+		left: 0;
+	}
+	&::after{
+		height: calc(100% - 8rem);
+		top: 8rem;
+		right: 0;
+		transform: rotate(180deg);
+	}
+}
+.infoContent{
+	width: 83%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	margin: 0 auto;
+}
+.timeline{
+	&-item{
+		display: flex;
+		flex-flow: row nowrap;
+		margin-bottom: 0.5rem;
+		list-style: none;
+	}
+	&-item::before{
+		content:'';
+		width: 0.4rem;
+		height: 0.4rem;
+		display: inline-block;
+		background-color: var(--cyan-500);
+		border-radius: 50%;
+		margin-top: 0.5rem;
+		margin-right: 0.5rem;
+	}
+}
+.works{
+	width: 83%;
+	margin: 0 auto;
+
+}
+.listWorks{
+	&-item{
+		margin-bottom: 4rem;
+	}
+}
