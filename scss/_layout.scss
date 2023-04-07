@@ -52,7 +52,7 @@
 
 	&::before, &::after{
 		content: '';
-		width: calc(50% - 6rem);
+		width: 50%;
 		display: block;
 		position: absolute;
 		border: 0.125rem solid var(--gray-900);
