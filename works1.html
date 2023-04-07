@@ -11,6 +11,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@100;300;400;500;700&display=swap"
 		rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/global.js"></script>
 	<title>07's Profile</title>
 </head>
@@ -20,8 +21,8 @@
 		<header class="header header-eva">
 			<h1 class="sr-only">07's Profile</h1>
 			<nav class="nav-page">
-				<a href="index.html">回首頁</a>
-				<a href="">聯絡我</a>
+				<a href="index.html" class="font-white">回首頁</a>
+				<!-- <a href="">聯絡我</a> -->
 			</nav>
 			<div class="alignCenter pt-16 pb-16">
 				<h2 class="w100 font-xxLarge font-white font-weight500">長榮航空 Evaair 官網改版</h2>
@@ -89,10 +90,10 @@
 					</figcaption>
 				</figure>
 			</article>
-			<h2 class="h2 h2--dots font-xLarge font-weight400 mt-10">更多頁面</h2>
-			<ul class="listMorePage w100 mt-4">
+			<h2 id="morePage" class="h2 h2--dots font-xLarge font-weight400 mt-16">更多頁面</h2>
+			<ul id="listMorePage" class="listMorePage w100 mt-4">
 				<li class="listMorePage-item">
-					<a href="#demoPage1" class="link--morePage">
+					<a href="#lightbox" class="link--morePage">
 						<figure>
 							<figcaption>
 								<p class="title-listMorePage">首頁</p>
@@ -102,7 +103,7 @@
 					</a>
 				</li>
 				<li class="listMorePage-item">
-					<a href="#demoPage2" class="link--morePage">
+					<a href="#lightbox" class="link--morePage">
 						<figure>
 							<figcaption>
 								<p class="title-listMorePage">行程管理 - 總覽</p>
@@ -111,11 +112,57 @@
 						</figure>
 					</a>
 				</li>
+				<li class="listMorePage-item">
+					<a href="#lightbox" class="link--morePage">
+						<figure>
+							<figcaption>
+								<p class="title-listMorePage">行程管理 - 選位</p>
+							</figcaption>
+							<img src="images/eva/img-morePage3.jpg" class="img img--outline mt-4" alt="行程管理選位圖" />
+						</figure>
+					</a>
+				</li>
+				<li class="listMorePage-item">
+					<a href="#lightbox" class="link--morePage">
+						<figure>
+							<figcaption>
+								<p class="title-listMorePage">行程管理 - 預辦登機</p>
+							</figcaption>
+							<img src="images/eva/img-morePage4.jpg" class="img img--outline mt-4" alt="行程管理預辦登機圖" />
+						</figure>
+					</a>
+				</li>
+				<li class="listMorePage-item">
+					<a href="#lightbox" class="link--morePage">
+						<figure>
+							<figcaption>
+								<p class="title-listMorePage">我的帳戶總覽</p>
+							</figcaption>
+							<img src="images/eva/img-morePage5.jpg" class="img img--outline mt-4" alt="我的帳戶總覽圖" />
+						</figure>
+					</a>
+				</li>
+				<li class="listMorePage-item">
+					<a href="#lightbox" class="link--morePage">
+						<figure>
+							<figcaption>
+								<p class="title-listMorePage">會員 - 哩程程計數器</p>
+							</figcaption>
+							<img src="images/eva/img-morePage6.jpg" class="img img--outline mt-4" alt="會員哩程程計數器圖" />
+						</figure>
+					</a>
+				</li>
 			</ul>
+			<div class="w100 alignCenter mb-8">
+				<a href="https://www.evaair.com/zh-tw/index.html" target="_blank"
+					class="link--pageLinkOutBottom link--pageLinkOutEvaBottom mt-4">View
+					Website</a>
+			</div>
+
 		</main>
 	</div>
-	<div id="demoPage1" class="lightbox">
-		<a href="#" class="lightbox-close"></a>
+	<div id="lightbox" class="lightbox">
+		<a href="#morePage" class="lightbox-close"></a>
 		<div class="lightbox-content">
 			<div id="tabs" class="tabs w100 mt-4 mb-4">
 				<a href="javascript:;" class="tabs-button tabs-button--desktop mr-4 active">Desktop</a>
@@ -123,13 +170,12 @@
 			</div>
 			<ul id="tabsContent" class="tabsContent">
 				<li class="tabsContent-item active">
-					<img src="images/eva/img-demoPage-index.jpg" class="img" alt="">
 				</li>
 				<li class="tabsContent-item">
-					<img src="images/eva/img-demoPage-index-m.jpg" class="img img--demopageMobile" alt="">
 				</li>
 			</ul>
 		</div>
+	</div>
 </body>
 
 </html>
