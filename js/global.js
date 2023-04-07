@@ -11,7 +11,7 @@ $(function () {
 			e.preventDefault();
 
 			$(this).addClass('active').siblings('a').removeClass('active');
-			$(tabsContent[i]).addClass('active').siblings('li').removeClass('active');
+			$(tabsContent[i]).fadeIn(500).siblings().hide();
 		});
 	}
 
@@ -21,8 +21,9 @@ $(function () {
 			e.preventDefault();
 
 			window.location.hash = 'lightbox';
+			$('body').addClass('hidden');
 			$(tabsLink[0]).addClass('active');
-			$(tabsContent[0]).addClass('active');
+			$(tabsContent[0]).show();
 
 			for (j = 0; j < tabsContent.length; j++) {
 				$(tabsContent[j]).append('<img src=' + 'images/eva/img-demoPage' + (i + 1) + '-' + (j + 1) + '.jpg class="img"/>');
@@ -31,103 +32,10 @@ $(function () {
 	}
 
 	$(lightboxClose).on('click', function (e) {
+		window.location.hash = 'morePage';
 
-		$(tabsContent).removeClass('active').children().remove();
+		$(tabsContent).fadeOut(500).children().remove();
 		$(tabsLink).removeClass('active');
+		$('body').removeClass('hidden');
 	})
 });
-
-// 	for (let i = 0; i < listMorePage.length; i++) {
-// 		listMorePage[i].addEventListener('click', function (e) {
-// 			e.preventDefault();
-
-// 			window.location.hash = 'lightbox';
-
-// 			//inserImgInLi
-// 			for (j = 0; j < tabsContent.length; j++) {
-
-// 				let img = document.createElement('img');
-// 				img.src = 'images/eva/img-demoPage' + (i + 1) + '-' + (j + 1) + '.jpg';
-// 				img.setAttribute('id', 'lightbixImg');
-// 				img.classList.add('img');
-// 				tabsContent[j].appendChild(img);
-// 			}
-
-// 		});
-// 	}
-
-// 	lightboxClose.addEventListener('click', function () {
-
-// 		for (let i = 0; i < tabsContent.length; i++) {
-
-// 			let lightbixImg = document.getElementById('lightbixImg');
-// 			tabsContent[i].removeChild(lightbixImg);
-// 		}
-
-// 	});
-
-
-
-// window.onload = function () {
-
-// 	//tab切換
-// 	let tabsLink = document.getElementById('tabs').querySelectorAll('a');
-// 	let tabsContent = document.getElementById('tabsContent').querySelectorAll('li');
-// 	let listMorePage = document.getElementById('listMorePage').querySelectorAll('li');
-// 	let lightboxClose = document.getElementById('lightboxClose');
-
-// 	for (let i = 0; i < tabsLink.length; i++) {
-// 		tabsLink[i].addEventListener('click', function (e) {
-// 			e.preventDefault();
-// 			tabsContentShow(this);
-// 		});
-// 	}
-
-// 	for (let i = 0; i < listMorePage.length; i++) {
-// 		listMorePage[i].addEventListener('click', function (e) {
-// 			e.preventDefault();
-
-// 			window.location.hash = 'lightbox';
-
-// 			//inserImgInLi
-// 			for (j = 0; j < tabsContent.length; j++) {
-
-// 				let img = document.createElement('img');
-// 				img.src = 'images/eva/img-demoPage' + (i + 1) + '-' + (j + 1) + '.jpg';
-// 				img.setAttribute('id', 'lightbixImg');
-// 				img.classList.add('img');
-// 				tabsContent[j].appendChild(img);
-// 			}
-
-// 		});
-// 	}
-
-// 	lightboxClose.addEventListener('click', function () {
-
-// 		for (let i = 0; i < tabsContent.length; i++) {
-
-// 			let lightbixImg = document.getElementById('lightbixImg');
-// 			tabsContent[i].removeChild(lightbixImg);
-// 		}
-
-// 	});
-
-// 	function tabsContentShow(activeTab) {
-
-// 		for (let i = 0; i < tabsLink.length; i++) {
-
-// 			if (tabsLink[i] === activeTab) {
-// 				tabsLink[i].classList.add('active');
-// 				tabsContent[i].classList.add('active');
-
-
-// 			} else {
-// 				tabsLink[i].classList.remove('active');
-// 				tabsContent[i].classList.remove('active');
-// 			}
-// 		}
-// 	}
-
-
-// }
-

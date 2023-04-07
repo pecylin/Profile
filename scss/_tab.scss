@@ -1,6 +1,13 @@
 .tabs{
-	width: 100%;justify-content: center;
+	width: 100%;
 	display: flex;
+	justify-content: center;
+	background-color: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1rem 0;
+	z-index: 10;
 
 	&-button{
 		display: flex;
@@ -32,16 +39,20 @@
 	}
 }
 .tabsContent{
-	width: 100%;
+	width: 90%;
+	height: 100%;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 5;
 
 	&-item{
 		width: 100%;
+		display: none;
 		position: absolute;
 		top: 0;
 		left: 0;
-		opacity: 0;
-		transition: opacity 0.5s ease-in-out;
+		padding-top: 6.5rem;
 		z-index: 0;
 	}
 	&-item:nth-child(2){
@@ -50,9 +61,5 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
-	}
-	&-item.active{
-		opacity: 1;
-		z-index: 5;
 	}
 }
