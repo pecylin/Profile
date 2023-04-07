@@ -1,0 +1,51 @@
+.tabs{
+	width: 100%;justify-content: center;
+	display: flex;
+
+	&-button{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		font-size: var(--font-medium);
+		font-weight: 500;
+		opacity: .5;
+		transition: opacity	0.5s ease-in-out;
+	}
+	&-button::before{
+		content:'';
+		width: 2rem;
+		height: 2rem;
+		display: block;
+	}
+	&-button--desktop::before{
+		background: url(../images/icon-desktop.svg) no-repeat 0 0;
+		background-size: 100%;
+	}
+	&-button--mobile::before{
+		background: url(../images/icon-mobile.svg) no-repeat 0 0;
+		background-size: 100%;
+	}
+	&-button.active{
+		opacity: 1;
+	}
+}
+.tabsContent{
+	width: 100%;
+	position: relative;
+
+	&-item{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+		z-index: 0;
+	}
+	&-item.active{
+		opacity: 1;
+		z-index: 5;
+	}
+}

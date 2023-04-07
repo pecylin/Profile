@@ -1,4 +1,13 @@
 .img{
 	width: 100%;
 	display: block;
+
+	&--outline{
+		border: var(--gray-200) 1px solid;
+	}
+	&--demopageMobile{
+		max-width: 22.5rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

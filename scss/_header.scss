@@ -1,0 +1,11 @@
+.header{
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	&-eva{
+		background-color: var(--green-eva);
+	}
+}
