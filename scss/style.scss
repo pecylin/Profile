@@ -3,7 +3,7 @@
 @import 'base';
 @import 'typography';
 @import 'spacing';
-@import 'buttonLink';
+@import 'buttonLink'; 
 @import 'layout';
 @import 'nav';
 @import 'img';
@@ -16,6 +16,9 @@
 html, body{
 	position: relative;
 	font-size: 16px;
+}
+html{
+	// scroll-behavior: smooth;
 }
 
 body{

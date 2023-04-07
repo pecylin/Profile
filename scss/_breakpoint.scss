@@ -39,9 +39,9 @@ $xlBreakpoint: 1440px;
 		width: 90%;
 	}
 	.articleWidth{
-		width: 80%;
+		width: 90%;
 	}
-	.listMoreWork{
+	.listMoreWork, .listMorePage{
 		flex-flow: column nowrap;
 	
 		&-item{
@@ -60,6 +60,7 @@ $xlBreakpoint: 1440px;
 	.lightbox{
 		&-content{
 			width: 65%;
+			margin-top: 0;
 		}
 	}
 }

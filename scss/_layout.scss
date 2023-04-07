@@ -120,11 +120,12 @@
 }
 .listMorePage{
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 
 	&-item{
 		width: 48%;
+		margin-bottom: 2rem;
 	}
 }
 .main{
@@ -132,5 +133,10 @@
 		padding-top: 4rem;
 		margin-left: auto;
 		margin-right: auto;
+	}
+}
+.title{
+	&-listMorePage{
+		font-weight: 400;
 	}
 }
