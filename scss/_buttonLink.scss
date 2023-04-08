@@ -19,17 +19,9 @@
 		text-decoration: none;
 		transition: background 0.5s ease-in-out;
 		box-sizing: border-box;
-		
-		&:hover{
-			background-color: var(--green-eva);
-			color: white;
-			outline: white 1px solid;
-			outline-offset: -1px;
-		}
 	}
 	&--pageLinkOutBottom{
 		display: inline-block;
-		background-color: var(--green-eva);
 		font-size: var(--font--medium);
 		font-weight: 500;
 		padding: 0.5rem 1rem;
@@ -38,6 +30,31 @@
 		transition: background 0.5s ease-in-out;
 		box-sizing: border-box;
 		
+	}
+	&--pageLinkOutEva{
+		color: var(--green-eva);
+
+		&:hover{
+			background-color: var(--green-eva);
+			color: white;
+			outline: white 1px solid;
+			outline-offset: -1px;
+		}
+	}
+	&--pageLinkOutFhtrust{
+		color: var(--red-fhtrust);
+
+		&:hover{
+			background-color: var(--red-fhtrust);
+			color: white;
+			outline: white 1px solid;
+			outline-offset: -1px;
+		}
+	}
+	&--pageLinkOutEvaBottom{
+		color: white;
+		background-color: var(--green-eva);
+
 		&:hover{
 			background-color: white;
 			color: var(--green-eva);
@@ -45,11 +62,16 @@
 			outline-offset: -1px;
 		}
 	}
-	&--pageLinkOutEva{
-		color: var(--green-eva);
-	}
-	&--pageLinkOutEvaBottom{
+	&--pageLinkOutFhtrustBottom{
 		color: white;
+		background-color: var(--red-fhtrust);
+
+		&:hover{
+			background-color: white;
+			color: var(--red-fhtrust);
+			outline:  var(--red-fhtrust) 1px solid;
+			outline-offset: -1px;
+		}
 	}
 	&--morePage{
 		width: 100%;

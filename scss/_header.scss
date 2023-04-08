@@ -1,20 +1,22 @@
 .header{
-	width: 100%;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	
-	&-eva{
+	&--index{
+		height: 5rem;
+		position: relative;
+		padding-top: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&--page{
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	&--eva{
 		background-color: var(--green-eva);
 	}
-}
-.nav{
-	&-item{
-		color: var(--gray-900);
-		text-decoration: none;
-	}
-	&-page{
-		color:white;
+	&--fhtrust{
+		background-color: var(--red-fhtrust);
 	}
 }

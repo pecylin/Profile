@@ -25,17 +25,42 @@ $(function () {
 			$(tabsLink[0]).addClass('active');
 			$(tabsContent[0]).show();
 
+			let file = $(this).parent('ul').data('file');
 			for (j = 0; j < tabsContent.length; j++) {
-				$(tabsContent[j]).append('<img src=' + 'images/eva/img-demoPage' + (i + 1) + '-' + (j + 1) + '.jpg class="img"/>');
+				$(tabsContent[j]).append('<img src=' + 'images/' + file + '/img-demoPage' + (i + 1) + '-' + (j + 1) + '.jpg class="img"/>');
 			}
 		})
 	}
 
 	$(lightboxClose).on('click', function (e) {
-		window.location.hash = 'morePage';
 
 		$(tabsContent).fadeOut(500).children().remove();
 		$(tabsLink).removeClass('active');
 		$('body').removeClass('hidden');
 	})
+
+	$('.navToggle').on('click', function () {
+		$(this).toggleClass('open');
+		$('.nav').toggleClass('open');
+	})
+
+	$('.nav-item').on('click', function () {
+		$(this).parent('nav').removeClass('open').prev('a').removeClass('open');
+	})
+
+	//goTop
+	const goTop = $('.link--goTop');
+
+	$(window).scroll(function () {
+		let pos = $(this).scrollTop();
+
+		if (pos > 300) {
+			console.log('scroll');
+			goTop.removeClass('link--goTopDisabled');
+		} else {
+			goTop.addClass('link--goTopDisabled');
+		}
+
+	})
+
 });
