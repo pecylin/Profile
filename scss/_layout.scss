@@ -10,8 +10,8 @@
 	justify-content: center;
 }
 .avatarImg{
-	width: 10rem;
-	height: 10rem;
+	width: 12rem;
+	height: 12rem;
 	position: relative;
 	background: url(../images/Avatar.svg) no-repeat 0 0;
 	background-size: 100%;
@@ -138,5 +138,13 @@
 .title{
 	&-listMorePage{
 		font-weight: 400;
+	}
+}
+.contact{
+	text-align: center;
+	padding-bottom: 2rem;
+
+	&-item{
+		font-size: var(--font-medium);
 	}
 }
