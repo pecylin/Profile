@@ -53,6 +53,23 @@ $xlBreakpoint: 1440px;
 			width: 100% !important;
 		}
 	}
+	.tabsContent{
+		&--w60{
+			width: 80%;
+		}
+	}
+	.link{
+		&--home span{
+			display: none;
+		}
+	}
+	.h2{
+		&--page{
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 @include lg-breakpoint {
 	.index{
@@ -150,6 +167,13 @@ $xlBreakpoint: 1440px;
 			width: 40%;
 		}
 	}
+	.img{
+		&--w70{
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
 @include xl-breakpoint {
@@ -160,6 +184,10 @@ $xlBreakpoint: 1440px;
 		width: 65%;
 	}
 	.tabsContent{
-		width: 80%;	
+		width: 80%;
+
+		&--w60{
+			width: 60%;
+		}
 	}
 }

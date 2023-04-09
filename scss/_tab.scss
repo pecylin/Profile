@@ -34,6 +34,14 @@
 		background: url(../images/icon-mobile.svg) no-repeat 0 0;
 		background-size: 100%;
 	}
+	&-button--ipad{
+		text-decoration: none;
+		cursor: inherit;;
+	}
+	&-button--ipad::before{
+		background: url(../images/icon-ipad.svg) no-repeat 0 0;
+		background-size: 100%;
+	}
 	&-button.active{
 		opacity: 1;
 	}
@@ -61,5 +69,8 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+	}
+	&--w60{
+		width: 60%;
 	}
 }

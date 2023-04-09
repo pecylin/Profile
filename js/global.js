@@ -55,7 +55,6 @@ $(function () {
 		let pos = $(this).scrollTop();
 
 		if (pos > 300) {
-			console.log('scroll');
 			goTop.removeClass('link--goTopDisabled');
 		} else {
 			goTop.addClass('link--goTopDisabled');

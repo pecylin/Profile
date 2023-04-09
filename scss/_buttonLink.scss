@@ -51,6 +51,16 @@
 			outline-offset: -1px;
 		}
 	}
+	&--pageLinkOutEsun{
+		color: var(--green-esun);
+
+		&:hover{
+			background-color: var(--green-esun);
+			color: white;
+			outline: white 1px solid;
+			outline-offset: -1px;
+		}
+	}
 	&--pageLinkOutEvaBottom{
 		color: white;
 		background-color: var(--green-eva);
@@ -73,6 +83,17 @@
 			outline-offset: -1px;
 		}
 	}
+	&--pageLinkOutEsunBottom{
+		color: white;
+		background-color: var(--green-esun);
+
+		&:hover{
+			background-color: white;
+			color: var(--green-esun);
+			outline:  var(--green-esun) 1px solid;
+			outline-offset: -1px;
+		}
+	}
 	&--morePage{
 		width: 100%;
 		height: 100%;
@@ -87,5 +108,42 @@
 	}
 	&--works:hover{
 		text-decoration: underline;
+	}
+	&--home{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		color: white;
+		text-decoration: none;
+	}
+	&--home::before{
+		content: '';
+		width: 1.8rem;
+		height: 1.8rem;
+		display: block;
+		background: url(../images/icon-home.svg) no-repeat 0 0;
+		background-size: 100%;
+		margin-bottom: 0.25rem;
+	}
+	&--goTop{
+		width: 3rem;
+		height: 3rem;
+		display: block;
+		background: url(../images/icon-top.svg)no-repeat 0 0;
+		background-size: 100%;
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		z-index: 10;
+		opacity: .5;
+		transition: opacity	0.5s ease-in-out;
+	}
+	&--goTopDisabled{
+		opacity: 0;
+		z-index: -1;
 	}
 }
