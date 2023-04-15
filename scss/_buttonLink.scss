@@ -8,6 +8,17 @@
 		margin-left: 0.5rem;
 		border-radius: 1.5rem;
 		text-decoration: none;
+		line-height: 2;
+	}
+	&--linkOut::after{
+		content:'';
+		width: 1rem;
+		height: 1rem;
+		display: inline-block;
+		background: url(../images/icon-linkOut.svg) no-repeat 0 0;
+		background-size: 100%;
+		margin-left: 0.5rem;
+		vertical-align: baseline;
 	}
 	&--pageLinkOut{
 		display: inline-block;

@@ -84,18 +84,39 @@
 	&-item{
 		display: flex;
 		flex-flow: row nowrap;
-		margin-bottom: 0.5rem;
+		align-items: baseline;
+		position: relative;
+		padding-bottom: 0.5rem;
+		box-sizing: border-box;
 		list-style: none;
 	}
 	&-item::before{
 		content:'';
-		width: 0.4rem;
-		height: 0.4rem;
+		width: 0.65em;
+		height: 0.65rem;
 		display: inline-block;
 		background-color: var(--cyan-500);
+		position: relative;
 		border-radius: 50%;
-		margin-top: 0.5rem;
 		margin-right: 0.5rem;
+		z-index: 1;
+	}
+	&-item::after{
+		content:'';
+		width: 2px;
+		height: 100%;
+		display: block;
+		background-color: var(--gray-900);
+		position: absolute;
+		top: 0.8rem;
+		left: 0.25rem;
+		z-index: 0;
+	}
+	&-item:last-child::after{
+		display: none;
+	}
+	p{
+		width: 95%;
 	}
 }
 .works{
@@ -104,7 +125,7 @@
 }
 .listWorks{
 	&-item{
-		margin-bottom: 4rem;
+		margin-bottom: 8rem;
 	}
 }
 .listMoreWork{
@@ -147,4 +168,9 @@
 	&-item{
 		font-size: var(--font-medium);
 	}
+}
+.projectTitle{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
