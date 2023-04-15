@@ -35,6 +35,9 @@ $xlBreakpoint: 1440px;
 }
 
 @include xs-breakpoint {
+	body{
+		overflow-x: hidden;
+	}
 	.contentWidth{
 		width: 90%;
 	}
