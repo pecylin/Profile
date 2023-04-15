@@ -35,9 +35,6 @@ $xlBreakpoint: 1440px;
 }
 
 @include xs-breakpoint {
-	body{
-		overflow-x: hidden;
-	}
 	.contentWidth{
 		width: 90%;
 	}
@@ -53,7 +50,7 @@ $xlBreakpoint: 1440px;
 	}
 	.listWorks{
 		&-item{
-			margin-bottom: 6rem;
+			margin-bottom: 5rem;
 		}
 	}
 	.header{

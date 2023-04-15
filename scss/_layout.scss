@@ -29,6 +29,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: black;
+		margin-left: -0.5rem;
 		color: white;
 		font-size: var(--font-large);
 		text-align: center;
@@ -39,7 +40,7 @@
 		content: '';
 		width: 0;
 		height: 0;
-		top: 42%;
+		top: 45%;
 		border: 0.6rem solid transparent;
 		border-top: 1rem solid black;
 		border-bottom: 0;
